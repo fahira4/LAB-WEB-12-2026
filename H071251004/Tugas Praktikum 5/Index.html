@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papan Tugas Tim</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-black text-slate-200 antialiased">
+  <div id="notifikasi"
+       class="hidden fixed top-4 right-4 z-50 rounded-lg border border-blue-400/60 bg-blue-600 px-4 py-3 text-sm font-medium text-white shadow-lg shadow-blue-900/40"
+       role="status"></div>
+
+  <main class="mx-auto grid max-w-6xl gap-6 px-4 py-8 md:grid-cols-[22rem_1fr]">
+    <section class="h-fit rounded-xl border border-violet-900/60 bg-zinc-950 p-5">
+      <h1 class="text-xl font-bold text-white">Tim Marsha</h1>
+      <h2 class="mb-3 mt-4 text-sm text-slate-400">Anggota</h2>
+      <p id="status-anggota" class="text-sm text-blue-300"></p>
+      <p id="error-anggota" class="hidden rounded-md border border-red-500/50 bg-red-950/60 p-3 text-sm text-red-300"></p>
+      <div id="daftar-anggota" class="flex flex-col gap-1"></div>
+    </section>
+
+    <section class="rounded-xl border border-violet-900/60 bg-zinc-950">
+      <div class="flex flex-col gap-3 border-b border-zinc-800 p-6 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 id="judul-tugas" class="text-2xl font-bold text-white">Tugas</h2>
+          <p id="info" class="mt-1 text-sm text-blue-300"></p>
+        </div>
+        <div id="blok-bar" class="hidden h-2 w-full overflow-hidden rounded-full bg-zinc-800 sm:w-72">
+          <div id="bar-progres" class="h-full w-0 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 transition-all"></div>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-3 border-b border-zinc-800 p-6">
+        <div class="flex gap-3">
+        <input id="input-cari" type="text" placeholder="Cari judul tugas" disabled
+           class="min-w-0 flex-1 rounded-lg border border-zinc-700 bg-zinc-900 px-4 py-3 text-slate-100 placeholder-slate-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/40 disabled:cursor-not-allowed disabled:opacity-40" />
+        <button id="tombol-cari" type="button" disabled
+            class="w-32 shrink-0 rounded-lg bg-violet-600 font-semibold text-white hover:bg-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-400 disabled:cursor-not-allowed disabled:opacity-40">Cari</button>
+        </div>
+
+        <form id="form-tugas" class="flex flex-col gap-3 sm:flex-row" novalidate>
+        <input id="input-judul" type="text" placeholder="Tambah tugas baru" disabled
+           class="flex-1 rounded-lg border border-zinc-700 bg-zinc-900 px-4 py-3 text-slate-100 placeholder-slate-500 focus:border-violet-400 focus:outline-none focus:ring-2 focus:ring-violet-500/40 disabled:cursor-not-allowed disabled:opacity-40" />
+        <button id="tombol-simpan" type="submit" disabled
+            class="sm:w-32 shrink-0 rounded-lg bg-violet-600 font-semibold text-white hover:bg-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-400 disabled:cursor-not-allowed disabled:opacity-40">Simpan</button>
+        </form>
+
+        <p id="error-form" class="hidden text-sm text-red-400"></p>
+      </div>
+
+      <div class="p-6">
+        <p id="status-tugas" class="text-sm text-blue-300"></p>
+        <p id="error-tugas" class="hidden rounded-md border border-red-500/50 bg-red-950/60 p-3 text-sm text-red-300"></p>
+        <button id="tombol-coba-lagi" type="button"
+                class="hidden mt-2 rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-400">Coba lagi</button>
+        <p id="pesan-kosong" class="text-sm text-slate-500">Pilih anggota di sebelah kiri untuk melihat tugasnya.</p>
+        <ul id="daftar-tugas" class="flex flex-col"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="Script.js"></script>
+</body>
+</html>

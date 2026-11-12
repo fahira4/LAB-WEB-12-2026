@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: #f8fafc; 
+  min-height: 100vh;
+}
+
+.dashboard-card {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.header {
+  background: linear-gradient(135deg, #2563eb, #4f46e5, #7c3aed);
+  padding: 40px 10%;
+  color: #ffffff;
+}
+
+.badge-header {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #dbeafe;
+  margin-bottom: 8px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  font-size: 14px;
+  color: rgba(219, 234, 254, 0.8);
+  margin-top: 4px;
+}
+
+.denied-box {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.denied-icon {
+  width: 56px;
+  height: 56px;
+  background-color: #ffe4e6;
+  color: #f43f5e;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.denied-box h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.denied-box p {
+  font-size: 14px;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+.content {
+  padding: 32px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.greeting-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 20px 24px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.greeting-label {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.greeting-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-top: 2px;
+}
+
+.badge-session {
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 12px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.stat-card {
+  padding: 18px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.stat-card.total {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.stat-card.total .stat-label { color: #64748b; }
+.stat-card.total .stat-value { color: #1e293b; }
+
+.stat-card.lulus {
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+}
+
+.stat-card.lulus .stat-label { color: #059669; }
+.stat-card.lulus .stat-value { color: #047857; }
+
+.stat-card.gagal {
+  background-color: #fff1f2;
+  border: 1px solid #fecdd3;
+}
+
+.stat-card.gagal .stat-label { color: #e11d48; }
+.stat-card.gagal .stat-value { color: #be123c; }
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 900;
+  margin-top: 4px;
+}
+
+.table-wrapper {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+thead {
+  background-color: #f8fafc;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th, td {
+  padding: 16px 20px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.2s;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.td-nama {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.td-rata {
+  text-align: center;
+  font-weight: 600;
+  color: #475569;
+}
+
+.td-status {
+  text-align: right;
+}
+
+.status-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+
+.status-badge.lulus {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.gagal {
+  background-color: #ffe4e6;
+  color: #9f1239;
+}
+
+.footer {
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.legend {
+  display: flex;
+  gap: 16px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot.lulus { background-color: #10b981; }
+.dot.gagal { background-color: #f43f5e; }

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio | Zahra Intan Pratiwi</title>
+    <link rel="icon" type="image/svg+xml" href="/Icon.svg" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --font-text: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-judul: Georgia, "Times New Roman", serif;
+        --color-kertas: #f7f9fc;
+        --color-tinta: #1b2559;
+        --color-biru: #2f5bea;
+        --color-biru-gelap: #1f43c0;
+        --color-stabilo: #ffe14d;
+
+        --animate-muncul: muncul 0.8s ease-out both;
+        --animate-turun: turun 0.7s ease-out both;
+        --animate-membesar: membesar 1s ease-out both;
+
+        @keyframes muncul {
+          from {
+            opacity: 0;
+            transform: translateY(24px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes turun {
+          from {
+            opacity: 0;
+            transform: translateY(-100%);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes membesar {
+          from {
+            opacity: 0;
+            transform: scale(0.85);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        font-family: var(--font-text);
+        color: var(--color-tinta);
+        background-color: var(--color-kertas);
+        background-image:
+          linear-gradient(#dbe3f3 1px, transparent 1px),
+          linear-gradient(90deg, #dbe3f3 1px, transparent 1px);
+        background-size: 28px 28px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/Main.jsx"></script>
+  </body>
+</html>
